@@ -200,10 +200,10 @@ class Slide:
         for gene in genes:
             if gene not in self.genes:
                 if suppress_errors:
-                    print(f"WARNING: Gene {gene} not found in slide {self.image_path=}.")
+                    print(f"WARNING: Gene {gene} not found in slide {self.image_path}.")
                     continue
                 
-                raise ValueError(f"Gene {gene} not found in slide {self.image_path=}.")
+                raise ValueError(f"Gene {gene} not found in slide {self.image_path}.")
             else:
                 indexes.append(self.genes.index(gene))
                 valid_genes.append(gene)
